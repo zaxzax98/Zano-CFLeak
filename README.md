@@ -202,26 +202,14 @@ See `CHANGELOG.md` for full version history and release notes.
 ---
 ## 👋 About TechTalent
 
-**Zano-CFLeak** is developed and maintained by **:contentReference[oaicite:0]{index=0}** —  
-a specialized Iraqi tech brand focused on **Cybersecurity, Ethical Hacking, Software Development, and Practical Technical Training**.
+**Zano-CFLeak** is a cybersecurity tool developed by **TechTalent**, an Iraqi tech brand that has trained **12,000+ students** in cybersecurity and software development.
 
-We have trained **12,000+ students** across Iraq and the region through:
-- Online & in-person technical courses
-- Hands-on cybersecurity bootcamps
-- Professional penetration testing and security consulting services
+Follow us on Instagram, LinkedIn, and join our Telegram community to stay updated with tools, courses, and opportunities:
+- https://www.instagram.com/zano_security/
+- https://www.instagram.com/techtalent.it/
+- https://www.linkedin.com/in/zanosecurity/
+- https://t.me/Tech3alent
 
-### 🌍 Our Platforms & Community
-- 📌 **Instagram / LinkedIn:** Educational cybersecurity content & real-world case studies  
-- 📌 **Telegram Group & Channel:**  
-  - Daily tips & tools  
-  - Cybersecurity discussions  
-  - Job opportunities & announcements  
-  - Updates about courses and projects  
-
-> Join our Telegram community to stay updated and connect with learners and professionals in cybersecurity.
-
-### 🎯 Our Mission
-To build a strong, practical, and ethical cybersecurity community by delivering **real skills**, **real tools**, and **real experience** — not just theory.
 
 ---
 
