@@ -25,7 +25,6 @@ Designed for **authorized penetration testing**, **OSINT**, and **security resea
 - [Examples](#examples)
 - [Output Formats](#output-formats)
 - [Version History](#version-history)
-- [Support](#support)
 - [Legal Notice](#legal-notice)
 
 ---
@@ -222,9 +221,6 @@ We have trained **12,000+ students** across Iraq and the region through:
 
 ### 🎯 Our Mission
 To build a strong, practical, and ethical cybersecurity community by delivering **real skills**, **real tools**, and **real experience** — not just theory.
-
----
-
 
 ---
 
