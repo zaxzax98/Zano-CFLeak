@@ -200,12 +200,31 @@ www.example.com,104.16.1.1,104.16.1.1,2606:4700::1,2606:4700::1,cloudflare
 See `CHANGELOG.md` for full version history and release notes.
 
 ---
+## 👋 About TechTalent
 
-## Support
+**Zano-CFLeak** is developed and maintained by **:contentReference[oaicite:0]{index=0}** —  
+a specialized Iraqi tech brand focused on **Cybersecurity, Ethical Hacking, Software Development, and Practical Technical Training**.
 
-If you find **Zano-CFLeak** useful, consider supporting the project.
+We have trained **12,000+ students** across Iraq and the region through:
+- Online & in-person technical courses
+- Hands-on cybersecurity bootcamps
+- Professional penetration testing and security consulting services
 
-(يمكنك إضافة دعمك الخاص هنا لاحقًا)
+### 🌍 Our Platforms & Community
+- 📌 **Instagram / LinkedIn:** Educational cybersecurity content & real-world case studies  
+- 📌 **Telegram Group & Channel:**  
+  - Daily tips & tools  
+  - Cybersecurity discussions  
+  - Job opportunities & announcements  
+  - Updates about courses and projects  
+
+> Join our Telegram community to stay updated and connect with learners and professionals in cybersecurity.
+
+### 🎯 Our Mission
+To build a strong, practical, and ethical cybersecurity community by delivering **real skills**, **real tools**, and **real experience** — not just theory.
+
+---
+
 
 ---
 
