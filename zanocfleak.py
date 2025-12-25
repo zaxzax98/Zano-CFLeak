@@ -235,7 +235,7 @@ class ReportWriter:
     @staticmethod
     def _write_normal(report: ScanReport, output: TextIO) -> None:
         """Write normal text format."""
-        output.write("CloudRip Scan Report\n")
+        output.write("Zano-CFLeak Scan Report\n")
         output.write("=" * 60 + "\n")
         output.write(f"Target: {report.target_domain}\n")
         output.write(f"Date: {report.scan_date}\n")
@@ -343,7 +343,7 @@ class ReportWriter:
             )
 
 
-class CloudRip:
+class ZanoCFLeak:
     """Main scanner class."""
 
     def __init__(
@@ -384,9 +384,9 @@ class CloudRip:
         figlet_text = pyfiglet.Figlet(font="big").renderText("zanocfleak")
         tqdm.write(f"{Colors.GREEN}{figlet_text}")
         tqdm.write(
-            f"{Colors.RED}CloudFlare Bypasser - Find Real IP Addresses Behind Cloudflare"
+            f"{Colors.RED}Zano-CFLeak – Find Real Origin IPs Behind Cloudflare"
         )
-        tqdm.write(f'{Colors.YELLOW}"Ripping through the clouds to expose the truth"')
+        tqdm.write(f'{Colors.YELLOW}"Unmasking hidden infrastructure behind the edge"')
         tqdm.write(
             f"{Colors.WHITE}GitHub: {Colors.BLUE}https://github.com/zaxzax98/Zano-CFLeakt\n"
         )
@@ -615,14 +615,14 @@ class CloudRip:
 def parse_arguments() -> argparse.Namespace:
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(
-        description="CloudRip - Cloudflare Bypasser",
+        description="Zano-CFLeak  - Cloudflare Bypasser",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python3 cloudrip.py example.com
-  python3 cloudrip.py example.com -w subs.txt -t 20 -o report.json -f json
-  python3 cloudrip.py example.com -w list1.txt -w list2.txt -v
-  python3 cloudrip.py example.com -q -o found.txt
+  python3 zanocfleak.py example.com
+  python3 zanocfleak.py example.com -w subs.txt -t 20 -o report.json -f json
+  python3 zanocfleak.py  example.com -w list1.txt -w list2.txt -v
+  python3 zanocfleak.py  example.com -q -o found.txt
         """,
     )
 
@@ -679,7 +679,7 @@ Examples:
 def main():
     args = parse_arguments()
 
-    scanner = CloudRip(
+    scanner =ZanoCFLeak(
         domain=args.domain,
         wordlists=args.wordlists,
         threads=args.threads,
