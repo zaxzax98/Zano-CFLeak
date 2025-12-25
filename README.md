@@ -25,7 +25,7 @@ Designed for **authorized penetration testing**, **OSINT**, and **security resea
 - [Examples](#examples)
 - [Output Formats](#output-formats)
 - [Version History](#version-history)
-- [about-techtalent](#about-techtalent)
+- [about-techtalent](#-about-techtalent)
 - [Legal Notice](#legal-notice)
 
 ---
