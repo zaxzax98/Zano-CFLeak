@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """
-CloudRip - Cloudflare Bypasser
-Find real IP addresses behind Cloudflare protection by scanning subdomains.
+Zano-CFLeak – Cloudflare Origin IP Discovery Tool
+Discover real origin IP addresses hidden behind Cloudflare protection
+by analyzing subdomains and DNS records.
 """
+
 
 import argparse
 import csv
