@@ -61,7 +61,7 @@ Designed for **authorized penetration testing**, **OSINT**, and **security resea
 
 Clone the repository:
 ```bash
-git clone https://github.com/zano-security/Zano-CFLeak.git
+git clone https://github.com/zaxzax98/Zano-CFLeak.git
 cd Zano-CFLeak
 ````
 
