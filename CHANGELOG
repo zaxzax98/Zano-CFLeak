@@ -1,0 +1,187 @@
+# Changelog
+
+All notable changes to **Zano-OriginIP** will be documented in this file.
+
+This project follows the principles of
+[Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
+and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## [2.1.0] – Major Feature Upgrade
+
+### Added
+
+#### 🌐 IPv6 Intelligence Support
+- Full IPv6 (AAAA record) resolution alongside IPv4
+- Detection of Cloudflare IPv6 ranges (7 official ranges)
+- Separate Cloudflare status indicators for IPv4 and IPv6 results
+
+#### 🔍 Advanced Multi-IP Discovery
+- DNS resolution now returns **all associated IPs**, not just the first hit
+- Each IP is individually evaluated against Cloudflare ranges
+- Output structure:
+  - `IPv4: [ip1, ip2, ip3]`
+  - `IPv6: [ip1, ip2]`
+- CSV exports use semicolon-separated values for multiple IPs
+
+#### 📊 Real-Time Progress Tracking
+- Live progress bar during subdomain enumeration using `tqdm`
+- Displays:
+  - Elapsed time
+  - Estimated time remaining
+  - Total scanned domains
+  - Cloudflare-protected count
+- Automatically disabled in quiet mode (`-q`)
+
+#### ☁️ Dynamic Cloudflare IP Intelligence
+- Automatic fetching of Cloudflare IP ranges from official endpoints:
+  - `https://www.cloudflare.com/ips-v4`
+  - `https://www.cloudflare.com/ips-v6`
+- Smart fallback to embedded ranges if API is unreachable
+- Runtime logging indicates data source (API vs fallback)
+
+#### 📁 Multi-Format Reporting
+- Supported output formats:
+  - JSON (`-f json`)
+  - YAML (`-f yaml`) – custom serializer (no external dependency)
+  - CSV (`-f csv`)
+  - Enhanced human-readable terminal output
+- Structured reports with clear sections:
+  - Origin IPs
+  - Cloudflare-protected targets
+  - Unresolved domains
+  - Errors
+
+#### 📚 Multi-Wordlist Support
+- Load multiple wordlists via repeated `-w` flags
+- Automatic merging and deduplication
+- Individual logging for each loaded wordlist
+
+#### 🔊 Verbosity & Output Control
+- Verbose mode (`-v, --verbose`) shows all scan results
+- Quiet mode (`-q, --quiet`) outputs only confirmed origin IPs
+- Structured logging with verbosity levels
+
+#### 🧠 Smart Root Domain Check
+- Automatic resolution of the root domain before subdomain enumeration
+
+#### 🧾 Scan Summary Report
+End-of-scan statistics include:
+- Total domains tested
+- Non-Cloudflare (origin) IP count
+- Cloudflare-protected domains count
+- Unresolved domains
+- Error count
+
+#### 🧹 Wordlist Parsing Enhancements
+- Supports inline comments (`#`)
+- Automatically ignores empty lines
+
+#### 🧩 Data Models & Typing
+- `ResolveResult` dataclass with list-based IP storage
+- Separate tracking for:
+  - IPv4 / IPv6
+  - Cloudflare vs non-Cloudflare IPs
+- Computed properties for clean origin IP extraction
+- `ScanReport` dataclass with serialization support
+- Modular architecture:
+  - `CloudflareIPRanges`
+  - `ReportWriter`
+  - `ZanoOriginIP` (core scanner)
+  - `Colors`, `OutputFormat`
+
+---
+
+### Changed
+
+#### 🏗️ Architecture Refactor
+- Migrated from procedural code to a fully object-oriented design
+- Encapsulated scanner state and configuration
+- Clear separation of responsibilities (scan, detection, reporting)
+
+#### 🔐 Cloudflare Detection Logic
+- Improved IPv4 / IPv6 parsing with robust error handling
+- Lazy-loading Cloudflare ranges for performance optimization
+
+#### ⚠️ Error & Signal Handling
+- Graceful handling of:
+  - DNS timeouts
+  - User interrupts
+  - Encoding issues
+- Cleaner executor shutdown with future cancellation
+
+#### ⚡ Performance Tuning
+- Reduced request delay from `0.1s` → `0.05s`
+
+#### 🎨 Output Enhancements
+- Unified display of IPv4 + IPv6 results
+- Color-coded Cloudflare indicators
+- Clear labeling for protected vs origin infrastructure
+
+#### 📖 Documentation
+- Comprehensive module-level and class-level docstrings
+- Clear tool purpose and ethical usage notes
+
+---
+
+### Removed
+
+- Deprecated global variables (state is now instance-based)
+- Legacy `os` usage (fully migrated to `pathlib`)
+- Inline color constants (centralized in `Colors` class)
+
+---
+
+### Technical Improvements
+
+#### 🧪 Code Quality
+- Executable shebang (`#!/usr/bin/env python3`)
+- UTF-8 enforced file handling
+- Optimized wordlist handling using `set` + sorted output
+
+#### 📦 Dependencies
+- `requests` – Cloudflare IP intelligence
+- `tqdm` – progress visualization
+- Native modules: `csv`, `json`, `datetime`, `dataclasses`, `enum`
+
+#### 🖥️ CLI Enhancements
+- Improved help formatting
+- Real-world usage examples in CLI help
+- Clearer argument descriptions
+
+---
+
+## [2.0.0] – Recon Expansion
+
+### Added
+- Massive wordlist expansion (100 → 600+ entries)
+- API, cloud, IoT, CI/CD, and microservice endpoints
+- Improved coverage for authentication, payments, analytics
+- Better geographic and infrastructure diversity
+
+---
+
+## [1.5.0]
+
+### Added
+- Adaptive rate limiting to avoid DNS throttling
+
+### Changed
+- Improved thread management and stability
+
+### Fixed
+- Resolved DNS crash scenarios
+- Enhanced colored terminal output
+
+---
+
+## [1.0.0] – Initial Release
+
+### Added
+- Core origin IP discovery engine
+- Multi-threaded subdomain enumeration
+- Cloudflare IP filtering
+- Custom wordlist support
+- Result export to file
+- Initial reconnaissance wordlist
