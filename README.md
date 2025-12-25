@@ -233,10 +233,6 @@ Zano-CFLeak must only be used on systems you own or have explicit written permis
 
 Unauthorized scanning may violate local and international laws including (but not limited to):
 
-* CFAA (USA)
-* Computer Misuse Act (UK)
-* Local cybercrime regulations
-
 **The author assumes no responsibility for misuse.**
 You are solely responsible for compliance with all applicable laws.
 
